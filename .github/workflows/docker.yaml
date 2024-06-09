@@ -7,7 +7,7 @@ on:
 
 
 env:
-  ALIYUN_REGISTRY: "${{ secrets.REPO_REGISTRY }}"
+  ALIYUN_REGISTRY: "${{ secrets.ALIYUN_REGISTRY }}"
   ALIYUN_NAME_SPACE: "${{ secrets.ALIYUN_NAME_SPACE }}"
   ALIYUN_REGISTRY_USER: "${{ secrets.ALIYUN_REGISTRY_USER }}"
   ALIYUN_REGISTRY_PASSWORD: "${{ secrets.ALIYUN_REGISTRY_PASSWORD }}"
@@ -26,7 +26,7 @@ jobs:
 
     - name: Build and push image Aliyun
       run: |
-        docker login -u $ALIYUN_REGISTRY_USER $ALIYUN_REGISTRY
+        docker login -u $ALIYUN_REGISTRY_USER -p $ALIYUN_REGISTRY_PASSWORD $ALIYUN_REGISTRY
         while IFS= read -r line; do
           [[ -z "$line" ]] && continue
           echo "docker pull $line"
