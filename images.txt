@@ -7,3 +7,4 @@ minio/minio:RELEASE.2024-06-06T09-36-42Z
 nacos/nacos-server:v2.3.2
 rabbitmq:3.13-management
 keking/kkfileview:4.1.0
+--platform linux/arm64 keking/kkfileview:4.1.0
