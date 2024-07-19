@@ -9,3 +9,4 @@ rabbitmq:3.13-management
 keking/kkfileview:4.1.0
 nginx:latest
 nacos/nacos-server:v2.1.1
+nacos/nacos-server:v2.0.2
